@@ -27,16 +27,18 @@ want to set up a Virtual Machine running Ubuntu.
 You will also need  a bunch of standard Open Source development tools including
 but not limited to:
 
- - GNU gcc
+ - GNU gcc or Clang
  - GNU make
  - GNU autoconf
+ - Perl
  - GHC (version 7.10.* or later)
  - python-sphinx
  - libgmp (including the header files, on Debian/Ubuntu this is libgmp-dev)
  - libncurses (on Debian/Ubuntu this is libncurses5-dev)
 
 If you are interested in building GHC as a Linux or Mac to Android/Arm or
-iOS/arm cross compiler you will also need llvm; versions 3.7 and 3.8.
+iOS/arm cross compiler you will also need llvm (versions 3.7 and 3.8) and a
+working GNU GCC or Clang cross compile toolchain.
 
 # Before the Hack Day
 
@@ -53,6 +55,12 @@ sed -i 's|https://github.com/ghc|git://git.haskell.org|' .git/config
 git submodule update --init --recursive --rebase
 ```
 
+You should probably also have a go at [Building GHC] on your own. If you run
+into trouble we can sort that out on the Hack Day.
+
+
 
 
 [Glasgow Haskell Compiler]: https://ghc.haskell.org/trac/ghc/
+
+[Building GHC]: https://ghc.haskell.org/trac/ghc/wiki/Building
